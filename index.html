@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завантажити</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-overlay {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 200px); /* Відняти місце для тексту і кнопки */
+            overflow: hidden;
+        }
+
+        .image-overlay img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .download-btn {
+            padding: 15px 30px;
+            background-color: #1e1e1e;
+            border: 1px solid #fff;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            background-color: #333;
+        }
+
+        .text-content {
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .download-btn {
+                padding: 18px 36px; /* Збільшена кнопка */
+                font-size: 20px;
+            }
+
+            .text-content {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-overlay {
+                height: calc(100vh - 150px); /* Ще більше місця для мобільних */
+            }
+
+            .download-btn {
+                padding: 20px 40px; /* Ще більше збільшення кнопки */
+                font-size: 22px;
+            }
+
+            .text-content {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-overlay">
+            <img src="peng.png" alt="Ваше зображення" id="uploadImage">
+        </div>
+        <a href="https://drive.google.com/uc?export=download&id=1tWr-NIsEW0oFX1J5X4nggzHTpv00BEuu" class="download-btn" download="your-file.mp4">Скачати</a>
+        <div class="text-content">
+            1.0.0 <!-- Текст версії або іншого змісту, по центру -->
+        </div>
+    </div>
+</body>
+</html>
